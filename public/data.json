@@ -1,0 +1,59 @@
+[
+    {
+      "_id": "626268d0eb37539ff0b33aa2",
+      "index": 0,
+      "picture": "https://sc04.alicdn.com/kf/H4e155fdda3124bf99246bec3cb404e40M/248439853/H4e155fdda3124bf99246bec3cb404e40M.jpg",
+      "name": "Professional incline decline dumbbell exercise bench",
+      "discription": "Adjustable Incline Decline Workout Bench. Weight Bench for Dumbbell & Barbell Press Exercises & Workouts. Great for Commercial",
+      "price": 25000
+    },
+    {
+      "_id": "626268d027278885dd653b37",
+      "index": 1,
+      "picture": "https://hirakraja.com/1879-medium_default/mini-stepper-with-resistance-bands.jpg",
+      "name": "Mini Stepper with Resistance Bands",
+      "discription": " Step up your workout with hirakraja Health & Fitness Mini Stepper with Resistance Bands! Low-impact training with high levels of results, this mini stepper offers adjustable resistance for every user's fitness needs. ",
+      "price": 20000
+    },
+    {
+      "_id": "626268d04d29d16cdc9ec946",
+      "index": 2,
+      "picture": "https://hirakraja.com/4751-medium_default/chin-up-and-dip-station-ab-tower-full-body-workout-power-tower.jpg",
+      "name": "Chin up and dip Station ab tower full body workout power tower",
+      "discription": "Multi-function Equipment]This workout equipment can used for pull ups, push ups,chin up, knee raise and dips, main training abdominal muscles, arm, back, chest, shoulders and leg muscles.",
+      "price": 45000
+    },
+    {
+      "_id": "626268d071e018337c6beb85",
+      "index": 3,
+      "picture": "https://hirakraja.com/4994-medium_default/oma-foldable-motorized-treadmill-5105eb.jpg",
+      "name": "Oma Foldable Motorized Treadmill 5105EB",
+      "discription": "Motorized Treadmill OMA-1916CA is a unique and effective running machine for all.",
+      "price": 50000
+    },
+    {
+      "_id": "626268d020ec1789971abe26",
+      "index": 4,
+      "picture": "https://hirakraja.com/4830-medium_default/yonkful-maghnetic-home-use-spinner-exercise-bike.jpg",
+      "name": "YONKFUL MAGHNETIC HOME USE SPINNER EXERCISE BIKE",
+      "discription": "YONKFUL focus on fitness equipment for many years. We have our own factory and Research & Development Det. Some of our products are very popular on other E-Business Platform. Continuous innovation ke",
+      "price": 10000
+    },
+    {
+      "_id": "626268d0d991ba606e7814cc",
+      "index": 5,
+      "picture": "https://hirakraja.com/4345-medium_default/lat-pull-down-v-bar-with-grip.jpg",
+      "name": "Lat Pull Down V Bar With Grip",
+      "discription": "LAT Pull Down Bar features solid steel construction with polished chrome finish& swivel hanger & textured rubber coating handle to make it",
+      "price": 71000
+    },
+    {
+      "_id": "626268d0a2a6591dd8b0075b",
+      "index": 6,
+      "price": 40000,
+      "picture": "https://ae01.alicdn.com/kf/S2fb96efdfe55481abee729bd59f4d7b92/Man-Clothing-Javascript-Stickers-Mugs-T-Shirts-And-Phone-Cases-T-Shirt-Javascript-Angularjs-Reactjs-Yeoman.jpg_Q90.jpg_.webp",
+      "name": "Motorized Treadmill DK-12AF",
+      "discription": "Ideal for performing pull-downs, triceps press-downs, upright rows, straight bar curls, seated rows, plus more."
+    
+    }
+  ]
