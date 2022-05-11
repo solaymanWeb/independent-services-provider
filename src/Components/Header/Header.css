@@ -12,3 +12,9 @@ nav{
     padding-bottom: 50px;
     padding-top: 20px;
 }
+.log-out{
+    border: none;
+    background: transparent;
+    font-weight: 600;
+    font-size: 18px;
+}
