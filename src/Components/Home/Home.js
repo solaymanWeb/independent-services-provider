@@ -3,17 +3,13 @@ import './Home.css'
 import gym_banner from "../images/gym_banner.jpg"
 import {Container, Row, Col, Button} from 'react-bootstrap'
 import useGym from '../../hooks/useGym';
-import RequireAuth from '../RequireAuth/RequireAuth';
 import { Link, useNavigate } from 'react-router-dom';
 
 
 const Home = () => {
 
     const [gyms, setGyms] = useGym();
-    // const navigate = useNavigate()
-    // if(user){
-    //     navigate("/checkout")
-    // }
+    const navigate = useNavigate();
 
     return (
         <div>
@@ -46,6 +42,7 @@ const Home = () => {
                             <Link to="/checkout">
                             <Button variant='success'>Check out</Button>
                             </Link>
+                        
                             </div>
                             </div>
                             </Col>

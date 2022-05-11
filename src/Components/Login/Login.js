@@ -2,46 +2,59 @@
 import React from 'react';
 import { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const Login = () => {
 const [email, setEmail]=useState('');
 const [password, setPassword]=useState('');
+const [signInWithGoogle]=useSignInWithGoogle(auth);
 const [
   signInWithEmailAndPassword,
   user,
   loading,
   error,
 ] = useSignInWithEmailAndPassword(auth);
-const navigate = useNavigate();
-// if(user){
-//   navigate('/')
-// }
-if(user?.email){
-  navigate('/checkout')
-}
+const navigate=useNavigate()
+const location = useLocation()
 
-const handleEmail = event =>{
+let from = location.state?.from?.pathname || "/";
+
+const handleEmail=event=>{
   setEmail(event.target.value)
 }
-const handlePassword = event =>{
+const handlePassword =event=>{
   setPassword(event.target.value)
 }
- 
-const signIn =(event)=>{
-
-  signInWithEmailAndPassword(email, password)
+const createSignIn =event =>{
   event.preventDefault();
-
+  signInWithEmailAndPassword(email, password)
+  // navigate(from, { replace: true });
 }
+
+const handleGoogleSignIn =()=>{
+  signInWithGoogle();
+  
+}
+
+if(user){
+  navigate(from)
+}
+
+
+
 
     return (
         <div>
             <div className='reg-form'>
                 <h5>Log in</h5>
-            <Form onSubmit={signIn}>
+                <div>
+                  <button onClick={handleGoogleSignIn}>
+                    Google sign-in
+                  </button>
+                </div>
+            <Form onSubmit={createSignIn}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control onBlur={handleEmail} type="email" placeholder="Enter email" required />

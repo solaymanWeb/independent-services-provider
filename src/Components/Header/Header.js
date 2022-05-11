@@ -16,11 +16,9 @@ const Header = () => {
                 <Link to='/'>Home</Link>
                 <Link to='blog'>Blog</Link>
                 <Link to='about'>About</Link>
-
                 {
                     user? <button className='log-out' onClick={logout}>Log out</button>:<Link to='login'>Log-in</Link>
-                }
-                
+                } 
                 <Link to='register'>Register</Link>
             </nav>
         </div>
