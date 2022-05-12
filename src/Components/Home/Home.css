@@ -27,11 +27,12 @@
 .gym-details{
     display: flex;
    flex-direction: column;
-   align-items: flex-start;
     padding: 20px;
+    text-align: left;
 }
 .discription{
     font-weight: 600;
+
 }
 .gym-details Button{
     width: 100%;
