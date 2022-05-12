@@ -6,6 +6,7 @@ import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-fireba
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import './Login.css'
 
 const Login = () => {
 const [email, setEmail]=useState('');
@@ -79,8 +80,9 @@ const forgetPassword= async ()=>{
           </Button>
         </Form>
 
-      <Button onClick={forgetPassword}>Forget password</Button>
-
+          <div className='forgetPassword'>
+          <Button  onClick={forgetPassword}>Forget password</Button>
+          </div>
             </div>
             <h6>New use?  <Link to='/register'>please registerd</Link> </h6>
         </div>
