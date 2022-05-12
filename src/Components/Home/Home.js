@@ -12,6 +12,7 @@ const Home = () => {
     const navigate = useNavigate();
 
     return (
+        // BANNAR AREA 
         <div>
             <Container fluid="md">
                 <Row>
