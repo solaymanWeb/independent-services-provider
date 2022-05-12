@@ -30,7 +30,7 @@ const Register = () => {
   const submitRegister= async (event)=>{
     createUserWithEmailAndPassword(email, password);
     await sendEmailVerification();
-          alert('Sent email');
+          alert('Sent email for varify');
     event.preventDefault();
 
   }

@@ -48,7 +48,7 @@ if(user){
 }
 const forgetPassword= async ()=>{
   await sendPasswordResetEmail(email);
-     alert('Sent email');
+     alert('Sent email for new password');
 }
 
 
