@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, Navigate, useNavigate} from 'react-router-dom';
 import auth from '../../firebase.init'
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import './Register.css';
 
 const Register = () => {
@@ -13,9 +13,9 @@ const Register = () => {
     user,
     error
   ] = useCreateUserWithEmailAndPassword(auth);
+  const [sendEmailVerification, sending, vryError] = useSendEmailVerification(auth);
+
   const navigate = useNavigate();
-
-
     if(user){
       navigate('/')
     }
@@ -27,9 +27,10 @@ const Register = () => {
   const handlePassword=(event)=>{
     setPassword(event.target.value)
   }
-  const submitRegister=(event)=>{
+  const submitRegister= async (event)=>{
     createUserWithEmailAndPassword(email, password);
-
+    await sendEmailVerification();
+          alert('Sent email');
     event.preventDefault();
 
   }

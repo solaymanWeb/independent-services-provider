@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
 const Login = () => {
@@ -16,6 +17,9 @@ const [
   loading,
   error,
 ] = useSignInWithEmailAndPassword(auth);
+const [sendPasswordResetEmail, sending, resetError] = useSendPasswordResetEmail(
+  auth
+);
 const navigate=useNavigate()
 const location = useLocation()
 
@@ -41,7 +45,10 @@ const handleGoogleSignIn =()=>{
 if(user){
   navigate(from)
 }
-
+const forgetPassword= async ()=>{
+  await sendPasswordResetEmail(email);
+     alert('Sent email');
+}
 
 
 
@@ -71,6 +78,9 @@ if(user){
             Log in
           </Button>
         </Form>
+
+      <Button onClick={forgetPassword}>Forget password</Button>
+
             </div>
             <h6>New use?  <Link to='/register'>please registerd</Link> </h6>
         </div>
